@@ -18,4 +18,20 @@ public class Paciente {
     public String getNombre() {
         return nombre;
     }
+
+    public List<ListaMedicos> getMedicos() {
+        return medicos;
+    }
+
+    public void setMedicos(List<ListaMedicos> medicos) {
+        this.medicos = medicos;
+    }
+
+    public List<ListaExpedientes> getExpedientes() {
+        return expedientes;
+    }
+
+    public void setExpedientes(List<ListaExpedientes> expedientes) {
+        this.expedientes = expedientes;
+    }
 }
