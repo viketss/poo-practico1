@@ -1,42 +1,57 @@
-/*package Ejerciciodostreshospital;
+package Ejerciciodostreshospital;
 
 public class HospitalApp {
     public static void main(String[] args) {
+        // Crear pacientes
+        Paciente paciente1 = new Paciente("Juan Pérez");
+        Paciente paciente2 = new Paciente("Ana López");
 
-        //Creo expedientes
-        Expediente e1 = new Expediente("Hipertension arterial");
-        Expediente e2 = new Expediente("Chequeo general");
-        ListaExpedientes listaE1 = new ListaExpedientes(e1, e2);
+        // Crear expedientes para cada paciente
+        Expediente exp1 = new Expediente("Consulta general - Juan");
+        Expediente exp2 = new Expediente("Electrocardiograma - Juan");
+        ListaExpedientes listaExpedientesJuan = new ListaExpedientes(exp1, exp2);
 
+        Expediente exp3 = new Expediente("Consulta pediátrica - Ana");
+        Expediente exp4 = new Expediente("Vacunación - Ana");
+        ListaExpedientes listaExpedientesAna = new ListaExpedientes(exp3, exp4);
 
-        //Creo pacientes
-        Paciente p1 = new Paciente("Victoria Cuomo", listaE1);
-        Paciente p2 = new Paciente("Tomas Fiory",  listaE1);
-        ListaPaciente listaP1 = new ListaPaciente(p1,p2);
+        // Crear médicos
+        ListaPaciente listaPacientes = new ListaPaciente(paciente1, paciente2);
+        Medico medico1 = new Medico("Dr. Rodríguez", "Cardiología", listaPacientes);
+        Medico medico2 = new Medico("Dra. Martínez", "Pediatría", listaPacientes);
 
-        //Creo medicos
-        Medico m1 = new Medico("Dr.Martin Bergero", "Cardiologia", listaP1);
-        Medico m2 = new Medico("Dr.Baltasar Bergero", "Neurologia",listaP1);
-        ListaMedicos listaM = new ListaMedicos(m1,m2);
+        // Crear listas de médicos para los pacientes
+        ListaMedicos listaMedicosJuan = new ListaMedicos(medico1, medico2); // Juan atendido por ambos
+        ListaMedicos listaMedicosAna = new ListaMedicos(medico2, medico1); // Ana también atendida por ambos
 
-        //Creo equipos medicos
-        Equipo eq1 = new Equipo(1001);
-        Equipo eq2 = new Equipo(1002);
-        InventarioEquipos inventario = new InventarioEquipos(eq1,eq2);
+        // Vincular médicos y expedientes a los pacientes
+        paciente1.getMedicos().add(listaMedicosJuan);
+        paciente1.getExpedientes().add(listaExpedientesJuan);
 
-        //Creo departamentos
-        Departamento cardio = new Departamento("Cardiologia",listaM,eq1);
-        Departamento neuro = new Departamento("Neurologia",listaM,eq2);
+        paciente2.getMedicos().add(listaMedicosAna);
+        paciente2.getExpedientes().add(listaExpedientesAna);
 
-        //Creo el hospital
-        Hospital hospital = new Hospital("Hospital Vida Sana", cardio,inventario);
+        // Crear equipos e inventario
+        Equipo equipo1 = new Equipo(1001);
+        Equipo equipo2 = new Equipo(1002);
+        InventarioEquipos inventario = new InventarioEquipos();
 
-        //Pruebo getters
+        // Crear departamentos
+        Departamento cardiologia = new Departamento("Cardiología", equipo1, inventario);
+        Departamento pediatria = new Departamento("Pediatría", equipo2, inventario);
+
+        // Crear hospital
+        Hospital hospital = new Hospital("Hospital Central", inventario);
+
+        // Mostrar relaciones
         System.out.println("Hospital: " + hospital.getNombre());
-        System.out.println("Departamento: " + cardio.getNombre());
-        System.out.println("Medico: " + m1.getNombre());
-        System.out.println("Paciente: " + p1.getNombre());
-        System.out.println("Expediente: " + e1.getDescripcion());
+        System.out.println("Paciente 1: " + paciente1.getNombre());
+        System.out.println("  Expedientes: " + exp1.getDescripcion() + ", " + exp2.getDescripcion());
+        System.out.println("  Médicos: " + medico1.getNombre() + " (" + medico1.getEspecialidad() + "), "
+                + medico2.getNombre() + " (" + medico2.getEspecialidad() + ")");
+        System.out.println("Paciente 2: " + paciente2.getNombre());
+        System.out.println("  Expedientes: " + exp3.getDescripcion() + ", " + exp4.getDescripcion());
+        System.out.println("  Médicos: " + medico2.getNombre() + " (" + medico2.getEspecialidad() + "), "
+                + medico1.getNombre() + " (" + medico1.getEspecialidad() + ")");
     }
 }
-*/
