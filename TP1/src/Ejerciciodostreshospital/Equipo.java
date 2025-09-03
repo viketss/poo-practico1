@@ -1,13 +1,15 @@
 package Ejerciciodostreshospital;
 
 public class Equipo {
-    private String numeroSerie;
+    private long numeroSerie;
 
-    public Equipo(String numeroSerie) {
+    // constructor
+    public Equipo(long numeroSerie) {
         this.numeroSerie = numeroSerie;
     }
 
-    public String getNumeroSerie() {
+    // getter
+    public long getNumeroSerie() {
         return numeroSerie;
     }
 }

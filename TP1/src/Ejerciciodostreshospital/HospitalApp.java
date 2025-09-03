@@ -1,29 +1,28 @@
-package Ejerciciodostreshospital;
+/*package Ejerciciodostreshospital;
 
 public class HospitalApp {
     public static void main(String[] args) {
 
         //Creo expedientes
-
         Expediente e1 = new Expediente("Hipertension arterial");
         Expediente e2 = new Expediente("Chequeo general");
-        listaExpedientes listaE1 = new listaExpedientes(e1, e2);
+        ListaExpedientes listaE1 = new ListaExpedientes(e1, e2);
 
 
         //Creo pacientes
         Paciente p1 = new Paciente("Victoria Cuomo", listaE1);
         Paciente p2 = new Paciente("Tomas Fiory",  listaE1);
-        listaPaciente listaP1 = new listaPaciente(p1,p2);
+        ListaPaciente listaP1 = new ListaPaciente(p1,p2);
 
         //Creo medicos
         Medico m1 = new Medico("Dr.Martin Bergero", "Cardiologia", listaP1);
         Medico m2 = new Medico("Dr.Baltasar Bergero", "Neurologia",listaP1);
-        listaMedicos listaM = new listaMedicos(m1,m2);
+        ListaMedicos listaM = new ListaMedicos(m1,m2);
 
         //Creo equipos medicos
-        Equipo eq1 = new Equipo("SER-1001");
-        Equipo eq2 = new Equipo("SER-1002");
-        inventarioEquipos inventario = new inventarioEquipos(eq1,eq2);
+        Equipo eq1 = new Equipo(1001);
+        Equipo eq2 = new Equipo(1002);
+        InventarioEquipos inventario = new InventarioEquipos(eq1,eq2);
 
         //Creo departamentos
         Departamento cardio = new Departamento("Cardiologia",listaM,eq1);
@@ -40,3 +39,4 @@ public class HospitalApp {
         System.out.println("Expediente: " + e1.getDescripcion());
     }
 }
+*/

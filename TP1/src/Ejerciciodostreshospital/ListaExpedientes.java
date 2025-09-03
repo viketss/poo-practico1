@@ -1,11 +1,11 @@
 package Ejerciciodostreshospital;
 
-public class listaExpedientes {
+public class ListaExpedientes {
     private Expediente expediente1;
     private Expediente expediente2;
 
 
-    public listaExpedientes(Expediente expediente1, Expediente expediente2) {
+    public ListaExpedientes(Expediente expediente1, Expediente expediente2) {
         this.expediente1 = expediente1;
         this.expediente2 = expediente2;
     }
