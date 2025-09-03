@@ -9,7 +9,7 @@ public class Paciente {
     private List<ListaMedicos> medicos; // un paciente, muchos medicos
     private List<ListaExpedientes> expedientes; // un paciente, muchos expedientes
 
-    public Paciente(String nombre) {
+    public Paciente(String nombre, ListaExpedientes expedientes) {
         this.nombre = nombre;
         this.medicos = new ArrayList<>();
         this.expedientes = new ArrayList<>();

@@ -11,7 +11,7 @@ public class Departamento {
     // agregacion: el inventario existe independientemente del departamento
     private InventarioEquipos inventario;
 
-    public Departamento(String nombre, Equipo equipo, InventarioEquipos inventario) {
+    public Departamento(String nombre, ListaMedicos medicos, Equipo equipo) {
         this.nombre = nombre;
         this.medicos = new ArrayList<>();
         this.equipo = equipo;

@@ -12,7 +12,7 @@ public class Hospital {
     private List<Departamento> departamentos; // relacion uno a muchos
 
 
-    public Hospital(String nombre, InventarioEquipos inventario) {
+    public Hospital(String nombre,Departamento cardio, InventarioEquipos inventario) {
         this.nombre = nombre;
         this.departamentos = new ArrayList<>(); // relacion uno a muchos en constructor
         this.inventario = inventario;

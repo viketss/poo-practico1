@@ -1,4 +1,4 @@
-/*package Ejerciciodostreshospital;
+package Ejerciciodostreshospital;
 
 public class HospitalApp {
     public static void main(String[] args) {
@@ -39,4 +39,3 @@ public class HospitalApp {
         System.out.println("Expediente: " + e1.getDescripcion());
     }
 }
-*/
