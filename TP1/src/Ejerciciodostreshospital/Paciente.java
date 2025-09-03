@@ -1,20 +1,21 @@
 package Ejerciciodostreshospital;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Paciente {
     private String nombre;
-    private listaExpedientes expedientes;
+    //private ListaExpedientes expedientes;
+    private List<ListaMedicos> medicos; // un paciente, muchos medicos
+    private List<ListaExpedientes> expedientes; // un paciente, muchos expedientes
 
-
-    public Paciente(String nombre, listaExpedientes expedientes) {
+    public Paciente(String nombre) {
         this.nombre = nombre;
-        this.expedientes = expedientes;
+        this.medicos = new ArrayList<>();
+        this.expedientes = new ArrayList<>();
     }
 
     public String getNombre() {
         return nombre;
-    }
-
-    public listaExpedientes getExpedientes() {
-        return expedientes;
     }
 }

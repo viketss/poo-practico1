@@ -3,10 +3,10 @@ package Ejerciciodostreshospital;
 public class Medico {
     private String nombre;
     private String especialidad;
-    private listaPaciente pacientes;
+    private ListaPaciente pacientes;
 
 
-    public Medico(String nombre, String especialidad, listaPaciente pacientes) {
+    public Medico(String nombre, String especialidad, ListaPaciente pacientes) {
         this.nombre = nombre;
         this.especialidad = especialidad;
         this.pacientes = pacientes;
@@ -20,7 +20,7 @@ public class Medico {
         return especialidad;
     }
 
-    public listaPaciente getPacientes() {
+    public ListaPaciente getPacientes() {
         return pacientes;
     }
 }

@@ -1,15 +1,20 @@
 package Ejerciciodostreshospital;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hospital {
 
     private String nombre;
     private Departamento departamento;
-    private inventarioEquipos inventario;
+    // composicion: el inventario se crea en el hospital
+    private InventarioEquipos inventario;
+    private List<Departamento> departamentos; // relacion uno a muchos
 
 
-    public Hospital(String nombre, Departamento departamento, inventarioEquipos inventario) {
+    public Hospital(String nombre, InventarioEquipos inventario) {
         this.nombre = nombre;
-        this.departamento = departamento;
+        this.departamentos = new ArrayList<>(); // relacion uno a muchos en constructor
         this.inventario = inventario;
     }
 
@@ -21,7 +26,7 @@ public class Hospital {
         return departamento;
     }
 
-    public inventarioEquipos getInventario() {
+    public InventarioEquipos getInventario() {
         return inventario;
     }
 }
